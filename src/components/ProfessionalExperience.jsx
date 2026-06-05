@@ -3,63 +3,85 @@ import { Gsap, GsapPresence } from '../utils/gsapAnimate';
 // Note: scroll-triggered entrance animations removed from this section intentionally
 import { Plus, Calendar, Building2, Sparkles, ArrowUpRight } from 'lucide-react';
 
-const experiences = [
-  {
-    company: 'GDSC Udinus',
-    role: 'Developer Community',
-    period: 'Nov 2023 - Nov 2025',
-    impact: 'Contributed to 5+ technical discussions across 4 collaborative projects.',
-    stack: ['Community', 'Workshops', 'Collaboration'],
+  const experiences = [
+    {
+    company: 'SanberCode',
+    role: 'Quality Assurance Bootcamp',
+    period: 'Apr 2026 - May 2026',
+    impact:
+      'Built foundational Quality Assurance skills through hands-on projects covering manual testing, API testing, test documentation, and test automation with Cypress.',
+    stack: [
+      'Software Development Life Cycle (SDLC)',
+      'Software Testing Life Cycle (STLC)',
+      'Manual Testing',
+      'Automation Testing',
+      'Test Planning',
+      'Test Case Design',
+      'Bug Reporting',
+      'API Testing',
+      'Postman',
+      'Cypress',
+    ],
     description: [
-      'Actively participated in workshops, technical events, and collaborative learning sessions.',
-      'Contributed insights around development and analytics in community-driven projects.',
+      'Learned Software Development Life Cycle (SDLC), Software Testing Life Cycle (STLC), and core software testing fundamentals.',
+      'Created test plans, test cases, bug reports, and testing strategies using industry-standard QA documentation practices.',
+      'Performed API testing using Postman to validate endpoints, request flows, and system responses.',
+      'Developed automated web and API testing scripts using Cypress as an introduction to test automation.',
+      'Completed practical portfolio projects involving manual testing, API validation, Agile testing approaches, and automation testing workflows.',
     ],
   },
   {
-    company: 'Blockvizo',
-    role: 'Data Analyst',
-    period: 'Jun 2024 - Jul 2025',
-    impact: 'Improved forecasting accuracy by 35% and cut analysis time by 40%.',
-    stack: ['Data Analysis', 'Dashboards', 'Web3 Analytics', 'Predictive Modeling'],
+    company: 'BEKUP - Baparekraf for Startup',
+    role: 'Flutter Developer Cohort',
+    period: 'Jul 2025 - Nov 2025',
+    impact:
+      'Selected participant in BEKUP Create Bootcamp 2025, an intensive national Flutter upskilling program facilitated by Dicoding Indonesia and BEKUP.',
+    stack: ['Flutter', 'Dart', 'Firebase', 'State Management', 'Mobile Development', 'GitHub', 'Teamwork'],
     description: [
-      'Processed 50,000+ game hash history records to model item-drop probability behavior.',
-      'Built actionable dashboards for decentralized projects, enabling faster and more confident decisions.',
-      'Specialized in predictive airdrop and winning probability analysis across 10+ Web3 ecosystems.',
+      'Participated in a 5-month structured learning program focused on Flutter framework, Dart programming, and mobile application development best practices.',
+      'Collaborated with peers through team-based projects using GitHub for source code management and project development.',
+      'Built practical mobile applications while applying software engineering principles and development workflows.',
+      'Strengthened technical expertise in Flutter development alongside professional communication and teamwork skills.',
     ],
   },
+
   {
-    company: 'ASAH (led by Dicoding x Accenture)',
-    role: 'Machine Learning Cohort',
-    period: 'Aug 2025 - Jan 2026',
-    impact: 'Served as project manager during the capstone phase and improved team execution by 70%.',
-    stack: ['Project Leadership', 'ML Product', 'React', 'Stakeholder Sync'],
+    company: 'GDG on Campus Widyatama University',
+    role: 'Lead of Event Organizer',
+    period: 'Sep 2024 - Jul 2025',
+    impact:
+      'Led and successfully delivered 12+ technology and professional development events for students and community members.',
+    stack: [
+      'Leadership',
+      'Event Management',
+      'Team Coordination',
+      'Project Planning',
+    ],
     description: [
-      'Acted as project manager during capstone, leading a cross-functional team of 5 machine learning engineers and React developers.',
-      'Managed the development of a banking sales prediction portal to prioritize high-probability leads and reduce low-value outreach.',
-      'Coordinated timelines and technical workflows across functions to improve delivery speed and reliability.',
+      'Led the planning and execution of 12+ events including Info Sessions, Soft Skill Workshops, Tech Talks, and StudyJams.',
+      'Managed event timelines, scheduling, operational preparation, and event execution from concept to completion.',
+      'Delegated responsibilities and guided event staff to ensure activities ran effectively and according to plan.',
+      'Managed event resources and collaborated closely with Creative & Media and Public Relations divisions to maximize engagement.',
     ],
   },
+
   {
-    company: 'Programming Lab',
-    role: 'Lab Assistant',
-    period: 'Aug 2025 - Present',
-    impact: 'Mentored 110+ junior students through practical engineering sessions.',
-    stack: ['Teaching', 'Mentorship', 'Software Fundamentals'],
-    description: [
-      'Assisted in 3+ weekly academic lab sessions for programming and software engineering courses.',
-      'Mentored around 110 junior students in problem solving, practical exercises, and core programming concepts.',
+    company: 'GDG on Campus Widyatama University',
+    role: 'Staff of Public Relations',
+    period: 'Sep 2023 - Aug 2024',
+    impact:
+      'Selected as Best Staff of Public Relations while supporting community growth and external collaboration initiatives.',
+    stack: [
+      'Communication',
+      'Community Management',
+      'Partnership Building',
+      'Organization',
     ],
-  },
-  {
-    company: 'PIJAK (led by Dicoding x IBM)',
-    role: 'AI Engineer Cohort',
-    period: 'Jan 2026 - Present',
-    impact: 'Selected participant in the PIJAK AI Engineer cohort.',
-    stack: ['Python', 'Generative AI', 'Deep Learning', 'AI Ethics'],
     description: [
-      'Joined an intensive AI Engineer cohort focused on Generative AI, Deep Learning, and AI Ethics.',
-      'Developing advanced AI solutions with Python and industry-standard practices from the IBM SkillsBuild curriculum.',
-      'Building capstone-ready systems for real-world AI implementation challenges.',
+      'Managed communication channels for a community consisting of more than 300 members.',
+      'Prepared and managed emails related to speakers, participants, and certificate distribution processes.',
+      'Established relationships and collaborations with external communities, organizations, and partners.',
+      'Contributed to community engagement activities and was recognized as Best Staff of Public Relations.',
     ],
   },
 ];
@@ -205,7 +227,7 @@ const ProfessionalExperience = () => {
             </h2>
 
             <p className="mt-5 text-[14px] md:text-[15px] font-light leading-[1.8] text-black/60 max-w-[320px]">
-              Selected roles across AI cohorts, data analytics, and mentoring. Each step adds stronger delivery habits, leadership, and product clarity.
+              Selected roles across Flutter Cohorts, QA Cohorts, and IT Organization. Each step adds stronger delivery habits, leadership, and quality awareness.
             </p>
 
             <div className="mt-7 grid grid-cols-2 gap-2.5">
