@@ -2,7 +2,7 @@ export const PORTFOLIO_DATA = {
     profile: {
         name: "Naufal Fadhiil",
         role: "QA Engineer & Mobile Developer",
-        bio: "Informatics Engineering student with a strong interest in Software Quality Assurance and Mobile Application Development. Experienced in creating test plans, test cases, bug reporting, risk analysis, and Flutter application development. Passionate about ensuring software quality throughout the Software Development Life Cycle (SDLC).",
+        bio: "Informatics Engineering student specializing in Software Quality Assurance and Mobile Application Development. Experienced in manual testing, API testing, test planning, test case design, bug reporting, and test automation using Selenium and Cypress. Skilled in Flutter application development and committed to delivering reliable, high-quality software throughout the Software Development Life Cycle (SDLC).",
         location: "Bandung, Indonesia",
         email: "naufalfadhiil2206@gmail.com",
         socials: {
@@ -55,7 +55,10 @@ export const PORTFOLIO_DATA = {
         { name: "Manual Testing", category: "Quality Assurance" },
         { name: "Test Plan", category: "Quality Assurance" },
         { name: "Test Case Design", category: "Quality Assurance" },
+        { name: "Test Execution", category: "Quality Assurance" },
         { name: "Bug Reporting", category: "Quality Assurance" },
+        { name: "Test Summary Report", category: "Quality Assurance" },
+
 
         { name: "Python", category: "Script Language" },
         { name: "Cypress", category: "Test Automation" },
@@ -68,11 +71,11 @@ export const PORTFOLIO_DATA = {
         { name: "SQL", category: "Database" },
         { name: "MySQL", category: "Database" },
 
-        { name: "Postman", category: "API Testing" },
+        { name: "API Testing", category: "Quality Assurance" },
     ],
     projects: [
         {
-            slug: "warga-kita",
+            slug: "wargakita",
             title: "Warga Kita",
             category: "Mobile Application",
             description: "WargaKita App is a community-focused mobile application designed to coordinate local events and facilitate item sharing among neighbors. Its primary function is to streamline daily neighborhood interactions, thereby enhancing communication and social bonding within residential areas."
@@ -85,9 +88,21 @@ export const PORTFOLIO_DATA = {
         },
         {
             slug: "kalorin-ai-testing",
-            title: "Kalorin AI Testin",
+            title: "Kalorin AI Testing (E2E)",
             category: "E2E Manual Testing & Automation Testing",
             description: "KaloriN AI Testing Repository serves as a comprehensive quality assurance platform containing manual documentation, API validation, and planned Cypress E2E (End-to-End) automation for the KaloriN AI web application. Its primary function is to verify entire user flows—from authentication to meal tracking—ensuring system reliability, early bug detection, and a seamless user experience."
+        },
+        {
+            slug: "fake-rest-api-books-testing",
+            title: "Fake REST API - Books Testing",
+            category: "API Testing",
+            description: "A Software Quality Assurance project focused on validating CRUD functionality, data consistency, and error handling of the Fake REST API Books endpoint using Postman. The project includes test planning, test case creation, bug reporting, and quality assessment based on testing metrics."
+        },
+        {
+            slug: "booking-com-automation",
+            title: "Booking.com Automation Testing",
+            category: "Test Automation",
+            description: "A Selenium-based automation testing project that validates hotel booking workflows through automated browser interactions. The project demonstrates practical UI automation skills, regression testing concepts, and reusable test script development using Python and Selenium WebDriver."
         },
     ],
     achievements: [
@@ -99,25 +114,25 @@ export const PORTFOLIO_DATA = {
             track: "Flutter Mobile Development",
             techStack: ["Flutter", "Dart", "Firebase", "Provider", "Git", "GitHub"],
             links: {
-                // devfolio: "https://devfolio.co/projects/base-realms-b63a",
                 github: "https://github.com/NaufalFadhiil/WargaKitaAPP",
-                // live: "https://baserealms.app/"
             }
         }
     ],
     capabilities: [
-        "Mobile Application Development",
-        "Flutter",
-        "Requirement Analysis",
-        "Quality Assurance",
+        "Software Quality Assurance",
         "Manual Testing",
-        "Test Planning",        
+        "API Testing",
+        "Test Planning",
         "Test Case Design",
         "Test Execution",
         "Bug Reporting",
         "Test Automation",
-        "Software Development Life Cycle (SDLC)",
+        "Selenium Automation",
+        "Cypress Automation",
         "Software Testing Life Cycle (STLC)",
-        "API Testing"
+        "Software Development Life Cycle (SDLC)",
+        "Requirement Analysis",
+        "Mobile Application Development",
+        "Flutter Development"
     ]
 };

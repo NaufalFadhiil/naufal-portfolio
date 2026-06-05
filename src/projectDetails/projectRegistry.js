@@ -2,14 +2,11 @@ import { lazy } from "react";
 import { PROJECT_META_BY_SLUG } from "../data/projectMeta";
 
 const PROJECT_DETAIL_COMPONENTS = {
-  "diabetes-classification": lazy(() => import("./DiabetesClassificationDetail")),
-  leadsup: lazy(() => import("./LeadsUpDetail")),
-  polsekrembang: lazy(() => import("./PolsekRembangDetail")),
-  floodsegmen: lazy(() => import("./FloodSegmenDetail")),
-  qmeal: lazy(() => import("./QMealDetail")),
-  lostandfound: lazy(() => import("./LostAndFoundDetail")),
-  imageclas: lazy(() => import("./ImageClasDetail")),
-  "financial-assistant-bot": lazy(() => import("./FinancialAssistantDetail")),
+  wargakita: lazy(() => import("./WargaKitaDetail")),
+  villanakey: lazy(() => import("./VillaNaKeyDetail")),
+  "kalorin-ai-testing": lazy(() => import("./KalorinAIDetail")),
+  "fake-rest-api-books-testing": lazy(() => import("./FakeRestApiDetail")),
+  "booking-com-automation": lazy(() => import("./BookingComDetail")),
 };
 
 export function getProjectRouteConfig(slug) {
@@ -21,3 +18,5 @@ export function getProjectRouteConfig(slug) {
     Component: PROJECT_DETAIL_COMPONENTS[slug],
   };
 }
+
+
