@@ -10,12 +10,24 @@ const HackathonDetailModal = lazy(() => import('./HackathonDetailModal'));
 const achievements = [
   {
     icon: Trophy,
-    rank: 'National',
-    category: 'Hackathon',
-    title: 'National Finalist',
-    event: 'Base Indonesia Hackathon 2025',
+    rank: 'Award',
+    category: 'Bootcamp',
+    title: 'Best Capstone Project',
+    event: 'BEKUP Create Upskilling Bootcamp 2025',
     year: '2025',
-    description: 'Competed against top engineering teams nationwide, building a decentralized solution on the Base blockchain.',
+    description:
+      'Awarded for developing WargaKita, a community service platform recognized as the 4th best capstone project among participating teams.',
+  },
+
+  {
+    icon: Trophy,
+    rank: 'Award',
+    category: 'Organization',
+    title: 'Best Staff of Public Relations',
+    event: 'Google Developer Student Clubs Widyatama',
+    year: '2024',
+    description:
+      'Recognized for outstanding contribution, communication, and organizational support throughout the 2023–2024 term.',
   },
 ];
 
@@ -35,11 +47,11 @@ const CAPABILITIES = [
 /* ─────────────────────────────────────────
    Achievement Card
    ───────────────────────────────────────── */
-const AchievementCard = ({ achievement, index, onClick }) => {
+const AchievementCard = ({ achievement, index, /** onClick **/ }) => {
   const Icon = achievement.icon;
   return (
     <Gsap.div
-      onClick={onClick}
+      // onClick={onClick}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -200,14 +212,14 @@ const AboutSection = memo(function AboutSection() {
                 <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-black/32 mb-1.5">Status</p>
                 <div className="flex items-center gap-2">
                   <span className="w-[6px] h-[6px] rounded-full bg-lime-500 shrink-0" />
-                  <span className="text-[13px] font-bold text-black">Available</span>
+                  <span className="text-[13px] font-bold text-black">Available (Student)</span>
                 </div>
               </div>
               <div className="bg-white border border-black/[0.08] rounded-[3px] py-3.5 px-4">
                 <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-black/32 mb-1.5">Location</p>
                 <div className="flex items-center gap-1.5">
                   <MapPin size={11} className="text-black/38 shrink-0" />
-                  <span className="text-[13px] font-bold text-black">Indonesia</span>
+                  <span className="text-[13px] font-bold text-black">Bandung, Indonesia</span>
                 </div>
               </div>
             </div>
@@ -308,7 +320,6 @@ const AboutSection = memo(function AboutSection() {
               </div>
             </Gsap.div>
 
-            Achievements
             {achievements.length > 0 && (
               <Gsap.div
                 initial={{ opacity: 0, y: 14 }}
@@ -320,7 +331,7 @@ const AboutSection = memo(function AboutSection() {
                 <div className="flex items-center gap-3 mb-5">
                   <span className="w-[5px] h-[5px] rounded-full bg-lime-500 shrink-0" />
                   <p className="font-mono text-[9.5px] md:text-[10px] uppercase tracking-[0.22em] text-black/40">
-                    Notable Achievements
+                    Achievements
                   </p>
                   <div className="flex-1 h-px bg-gradient-to-r from-black/[0.1] to-transparent" />
                   <span className="font-mono text-[9px] font-bold border border-black/[0.1] bg-white px-2.5 py-1 rounded-[2px] text-black/35 tabular-nums">
@@ -334,7 +345,7 @@ const AboutSection = memo(function AboutSection() {
                       key={index}
                       achievement={achievement}
                       index={index}
-                      onClick={() => setShowHackathonDetail(true)}
+                      // onClick={() => setShowHackathonDetail(true)}
                     />
                   ))}
                 </div>
