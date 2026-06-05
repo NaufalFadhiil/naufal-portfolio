@@ -1,157 +1,123 @@
 export const PORTFOLIO_DATA = {
     profile: {
-        name: "Firdaus Khotibul Zickrian",
-        role: "AI Engineer & Full-Stack Developer",
-        bio: "Passionate about building intelligent systems that learn, adapt, and solve complex problems. Specializing in Generative AI, Deep Learning, and Modern Web Technologies.",
-        location: "Indonesia",
-        email: "firdauskhotibulzickrian@gmail.com",
+        name: "Naufal Fadhiil",
+        role: "QA Engineer & Mobile Developer",
+        bio: "Informatics Engineering student with a strong interest in Software Quality Assurance and Mobile Application Development. Experienced in creating test plans, test cases, bug reporting, risk analysis, and Flutter application development. Passionate about ensuring software quality throughout the Software Development Life Cycle (SDLC).",
+        location: "Bandung, Indonesia",
+        email: "naufalfadhiil2206@gmail.com",
         socials: {
-            github: "https://github.com/zickrian",
-            linkedin: "https://linkedin.com/in/firdauskhotibulzickrian/"
+            github: "https://github.com/NaufalFadhiil",
+            linkedin: "https://www.linkedin.com/in/naufal-fadhiil/"
         }
     },
     experience: [
         {
-            title: "Google Developer Student Club - Universitas Dian Nuswantoro",
-            period: "Nov 2023 - Nov 2025",
+            title: "Flutter Developer Cohort - BEKUP Create Bootcamp 2025 (led by Dicoding x BEKUP)",
+            period: "Jul 2025 - Nov 2025",
             description: [
-                "Actively participating in developer community events, workshops, and collaborative study sessions.",
-                "Contributed to 5+ community discussions across 4 projects, sharing insights on development and analytics."
+                "Selected as one of the participants in BEKUP Create Bootcamp 2025, a national upskilling program facilitated by Dicoding Indonesia and BEKUP (Baparekraf for Startup).",
+                "Developed mobile applications using Flutter and Dart through project-based learning activities.",
+                "Collaborated with peers using Git and GitHub for source code management and team development workflows.",
+                "Strengthened technical and professional skills in mobile application development."
             ]
         },
         {
-            title: "Data Analyst - Blockvizo",
-            period: "Jun 2024 - Jul 2025",
+            title: "Lead Event Organizer - GDG on Campus Widyatama University",
+            period: "Sep 2024 - Jul 2025",
             description: [
-                "Processed 50,000+ game hash history records, examining item drop patterns and building probability-based prediction models that improved forecasting accuracy by 35%.",
-                "Delivered actionable insights through data visualization dashboards, supporting strategic decisions for decentralized projects and reducing analysis time by 40%.",
-                "Specializing in predictive airdrop and winning probability analysis by examining large-scale on-chain data from 10+ Web3 ecosystems"
+                "Led the planning and execution of 12+ technology and professional development events.",
+                "Coordinated event scheduling, team assignments, and operational activities to ensure successful delivery.",
+                "Managed cross-functional collaboration with Creative Media and Public Relations divisions.",
+                "Developed leadership, communication, stakeholder management, and organizational skills."
             ]
         },
         {
-            title: "Lab Assistant - Programming Lab, Universitas Dian Nuswantoro",
-            period: "Aug 2025 - Present",
+            title: "Public Relations Staff - GDG on Campus Widyatama University",
+            period: "Sep 2023 - Aug 2024",
             description: [
-                "Assisted in over 3 academic lab sessions per week for programming and software development courses.",
-                "Mentored around 110 junior students by guiding them through practical exercises and foundational programming concepts."
+                "Managed communication channels and community engagement activities for 300+ members.",
+                "Prepared formal correspondence, participant communications, and certificate administration.",
+                "Established collaborations with external communities, organizations, and event partners.",
+                "Recognized as Best Staff of Public Relations for contribution and performance."
             ]
         },
-        {
-            title: "Machine Learning Cohort - ASAH (led by Dicoding x Accenture)",
-            period: "Aug 2025 - Jan 2026",
-            description: [
-                "Served as Project Manager, leading a cross-functional team of 5 machine learning engineers and React developers to build solutions addressing real-world business problems.",
-                "Managing the development of a banking sales prediction portal that improves sales efficiency by prioritizing high-probability leads and reducing time wasted on low-potential prospects.",
-                "Coordinated project timelines, technical discussions, and workflow execution across departments, improving team time efficiency by 70% and ensuring on-time delivery."
-            ]
-        },
-        {
-            title: "AI Engineer Cohort - PIJAK (led by Dicoding x IBM)",
-            period: "Jan 2026 - Present",
-            description: [
-                "Selected as one of the top talents for an intensive AI Engineering bootcamp focusing on Generative AI, Deep Learning, and Ethics.",
-                "Developing advanced AI solutions using Python, applying industry-standard practices from IBM SkillsBuild curriculum.",
-                "Collaborating on a capstone project to solve real-world challenges through innovative Artificial Intelligence implementation."
-            ]
-        }
+        
     ],
     techStack: [
-        { name: "Python", category: "Language" },
-        { name: "TensorFlow", category: "Deep Learning" },
-        { name: "PyTorch", category: "Deep Learning" },
-        { name: "React", category: "Frontend" },
-        { name: "Next.js", category: "Frontend" },
-        { name: "Tailwind CSS", category: "Frontend" },
-        { name: "PostgreSQL", category: "Database" },
-        { name: "Supabase", category: "Backend" },
-        { name: "Docker", category: "DevOps" },
-        { name: "MLOps", category: "Machine Learning Operations" },
-        { name: "Scikit-Learn", category: "Machine Learning" },
-        { name: "OpenCV", category: "Computer Vision" },
-        { name: "FastAPI", category: "Backend" },
-        { name: "Streamlit", category: "ML Deployment" },
-        { name: "Pandas", category: "Data Analysis" },
-        { name: "Matplotlib", category: "Visualization" },
-        { name: "Seaborn", category: "Visualization" },
-        { name: "Keras", category: "Deep Learning" },
-        { name: "Numpy", category: "Data Science" },
-        { name: "Google Gemini", category: "LLM / GenAI" },
-        { name: "RAG", category: "AI Architecture" },
-        { name: "ExpressJS", category: "Backend" },
-        { name: "Microsoft Azure", category: "Cloud" }
+        { name: "VS Code", category: "IDE" },
+        { name: "Android Studio", category: "IDE" },
+        { name: "Pycharm", category: "IDE" },
+
+        { name: "Flutter", category: "Mobile Development" },
+        { name: "Dart", category: "Programming Language" },
+        { name: "Firebase", category: "Backend Service" },
+
+        { name: "Manual Testing", category: "Quality Assurance" },
+        { name: "Test Plan", category: "Quality Assurance" },
+        { name: "Test Case Design", category: "Quality Assurance" },
+        { name: "Bug Reporting", category: "Quality Assurance" },
+
+        { name: "Python", category: "Script Language" },
+        { name: "Cypress", category: "Test Automation" },
+        { name: "Selenium", category: "Test Automation" },
+        { name: "Pytest", category: "Test Automation" },
+
+        { name: "Git", category: "Version Control" },
+        { name: "GitHub", category: "Version Control" },
+
+        { name: "SQL", category: "Database" },
+        { name: "MySQL", category: "Database" },
+
+        { name: "Postman", category: "API Testing" },
     ],
     projects: [
         {
-            slug: "diabetes-classification",
-            title: "Diabetes Classification",
-            category: "AI / Machine Learning",
-            description: "Machine Learning model to classify diabetes risk based on medical data."
+            slug: "warga-kita",
+            title: "Warga Kita",
+            category: "Mobile Application",
+            description: "WargaKita App is a community-focused mobile application designed to coordinate local events and facilitate item sharing among neighbors. Its primary function is to streamline daily neighborhood interactions, thereby enhancing communication and social bonding within residential areas."
         },
         {
-            slug: "leadsup",
-            title: "LeadsUp",
-            category: "AI-Powered Lead Scoring",
-            description: "AI system for scoring sales leads to prioritize high-value prospects."
+            slug: "villanakey",
+            title: "VillaNaKey",
+            category: "Mobile Booking App",
+            description: "Villa Na Key is an exclusive mobile application designed for booking a single private villa, offering users a seamless and convenient reservation experience directly from their smartphones. Its primary function is to simplify the rental process through an elegant interface and modern features tailored for personalized villa booking."
         },
         {
-            slug: "polsekrembang",
-            title: "Polsek Rembang Virtual Assistant",
-            category: "RAG Chatbot / AI Assistant",
-            description: "RAG-based chatbot to assist with police station inquiries and services."
+            slug: "kalorin-ai-testing",
+            title: "Kalorin AI Testin",
+            category: "E2E Manual Testing & Automation Testing",
+            description: "KaloriN AI Testing Repository serves as a comprehensive quality assurance platform containing manual documentation, API validation, and planned Cypress E2E (End-to-End) automation for the KaloriN AI web application. Its primary function is to verify entire user flows—from authentication to meal tracking—ensuring system reliability, early bug detection, and a seamless user experience."
         },
-        {
-            slug: "floodsegmen",
-            title: "Flood Segmentation Analyzer",
-            category: "Computer Vision",
-            description: "Computer Vision system for analyzing flood patterns and segmentation from satellite/drone imagery."
-        },
-        {
-            slug: "qmeal",
-            title: "QMeal E-Kantin",
-            category: "Multi-Vendor Ordering Platform",
-            description: "Digital canteen ordering system supporting multiple vendors and efficient queue management."
-        },
-        {
-            slug: "lostandfound",
-            title: "SITEMU Lost & Found Portal",
-            category: "Web Application",
-            description: "Community platform for reporting and finding lost items."
-        },
-        {
-            slug: "imageclas",
-            title: "Vegetable Image Classification",
-            category: "Computer Vision",
-            description: "Deep Learning model for classifying different types of vegetables from images."
-        },
-        {
-            slug: "financial-assistant-bot",
-            title: "Financial Assistant Bot",
-            category: "AI / Fintech",
-            description: "AI bot for personal finance management and advice."
-        }
     ],
     achievements: [
         {
-            title: "National Finalist - Base Indonesia Hackathon 2025",
-            project: "Base Realms",
-            description: "Built an onchain 16-bit RPG battle game on Base chain with QRIS payment integration, ERC-721/ERC-1155 NFTs, and seasonal reward pools. Onboards non-crypto users through familiar payment methods.",
-            team: "Terra Bit (Firdaus Khotibul Zickrian & Gagah Athallah Fatha)",
-            track: "Base Track",
-            techStack: ["Solidity", "Next.js", "TypeScript", "JavaScript", "CSS"],
+            title: "4th Best Capstone Project - BEKUP Create Bootcamp 2025",
+            project: "WargaKita",
+            description: "Developed WargaKita, a community-based mobile application designed to improve communication, reporting, and information sharing between residents and neighborhood administrators. The project focused on solving real-world community management challenges through a user-friendly mobile experience and was recognized as the 4th Best Capstone Project among participating teams in BEKUP Create Bootcamp 2025.",
+            team: "WargaKita Team(Naufal Fadhiil, Helmi Shidqi, Afif Dwi Sasonda, Riyando Rajagukguk)",
+            track: "Flutter Mobile Development",
+            techStack: ["Flutter", "Dart", "Firebase", "Provider", "Git", "GitHub"],
             links: {
-                devfolio: "https://devfolio.co/projects/base-realms-b63a",
-                github: "https://github.com/zickrian/Base-Realms",
-                live: "https://baserealms.app/"
+                // devfolio: "https://devfolio.co/projects/base-realms-b63a",
+                github: "https://github.com/NaufalFadhiil/WargaKitaAPP",
+                // live: "https://baserealms.app/"
             }
         }
     ],
     capabilities: [
-        "Machine Learning",
-        "Deep Learning",
-        "Computer Vision",
-        "Natural Language Processing (NLP)",
-        "Machine Learning Operations (MLOps)",
-        "Data Analysis",
-        "Web Development"
+        "Mobile Application Development",
+        "Flutter",
+        "Requirement Analysis",
+        "Quality Assurance",
+        "Manual Testing",
+        "Test Planning",        
+        "Test Case Design",
+        "Test Execution",
+        "Bug Reporting",
+        "Test Automation",
+        "Software Development Life Cycle (SDLC)",
+        "Software Testing Life Cycle (STLC)",
+        "API Testing"
     ]
 };

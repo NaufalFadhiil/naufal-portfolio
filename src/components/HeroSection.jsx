@@ -30,11 +30,11 @@ const LocationTimeBadge = () => {
   return (
     <div className="flex items-center justify-center gap-3 sm:gap-5 font-mono text-xs uppercase tracking-[0.15em] text-black/50">
       <div className="flex items-center gap-2">
-        <span className="font-bold text-black/70">Based in Indonesia</span>
+        <span className="font-bold text-black/70">Based in Bandung, Indonesia</span>
       </div>
       <div className="w-[1px] h-3 bg-black/15" />
       <div className="flex items-center gap-1.5 tabular-nums">
-        <span className="text-black/40 hidden sm:inline">LOCAL:</span>
+        <span className="text-black/40 hidden sm:inline">LOCAL TIME(WIB):</span>
         <span ref={timeRef} className="font-bold text-black/70" />
       </div>
     </div>
@@ -232,7 +232,7 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
             transition={{ duration: 0.75, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="text-[clamp(4.25rem,14vw,9rem)] font-black uppercase tracking-tight text-black leading-[0.88]"
           >
-            FIRDAUS
+            NAUFAL
           </Gsap.h1>
 
           <Gsap.h1
@@ -241,7 +241,7 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
             transition={{ duration: 0.75, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="text-[clamp(4.25rem,14vw,9rem)] font-black uppercase tracking-tight text-transparent leading-[0.88] mt-2 sm:mt-0 font-outline-fallback"
           >
-            ZICKRIAN
+            FADHIIL
           </Gsap.h1>
 
           {/* Right Decoration */}
@@ -257,10 +257,10 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
           className="flex flex-col items-center gap-2 mt-0"
         >
           <h2 className="text-[clamp(1.35rem,4.2vw,2.25rem)] font-bold text-black/80 tracking-tight flex items-center justify-center flex-wrap gap-2 px-2">
-            Architecting <span className="bg-lime-400/30 px-2 rounded-md ring-1 ring-lime-500/20">Intelligent</span> Paradigms<span className="text-lime-500 font-extrabold -ml-1">.</span>
+            Testing <span className="bg-lime-400/30 px-2 rounded-md ring-1 ring-lime-500/20">Ideas</span> Building<span className="text-lime-500 font-extrabold -ml-1"> <span className="bg-lime-400/30 px-2 rounded-md ring-1 ring-lime-500/20">Solutions</span> </span>
           </h2>
           <p className="font-sans text-base text-black/60 max-w-xl leading-7 mt-2 px-4">
-            AI Engineer & Full-Stack Developer specializing in high-performance, scalable systems.
+            QA Engineer & Flutter Developer focused on software quality, testing, and mobile application development.
           </p>
         </Gsap.div>
 

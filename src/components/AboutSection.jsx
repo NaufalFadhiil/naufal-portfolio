@@ -20,16 +20,16 @@ const achievements = [
 ];
 
 const STATS = [
-  { value: 'BUILD', label: 'Hands-on\nApproach' },
-  { value: 'AI+WEB', label: 'Product\nStack' },
-  { value: 'OPEN', label: 'To\nCollab' },
+  { value: 'Quality', label: 'User\nExperience' },
+  { value: 'Mobile+QA', label: 'Development\nTesting' },
+  { value: 'OPEN', label: 'To\nCollab/\nProject/\nWork' },
 ];
 
 const CAPABILITIES = [
-  'Machine Learning / CV',
-  'Generative AI & LLMs',
-  'Full-Stack Delivery',
-  'Data Engineering',
+  'Mobile Development',
+  'Quality Assurance',
+  'Manual Testing',
+  'Automation Testing',
 ];
 
 /* ─────────────────────────────────────────
@@ -173,7 +173,7 @@ const AboutSection = memo(function AboutSection() {
                   <source srcSet="/profilee.webp" type="image/webp" />
                   <img
                     src="/profilee.webp"
-                    alt="Firdaus Zickrian"
+                    alt="Naufal Fadhiil"
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover object-top grayscale-[25%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
@@ -183,7 +183,7 @@ const AboutSection = memo(function AboutSection() {
                 {/* Name plate at bottom */}
                 <div className="absolute bottom-0 left-0 right-0 px-5 pt-10 pb-4 bg-gradient-to-t from-black/65 via-black/30 to-transparent z-20">
                   <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-white/50 mb-0.5">Name</p>
-                  <p className="text-white font-bold text-[15px] tracking-wide leading-snug">Firdaus Zickrian</p>
+                  <p className="text-white font-bold text-[15px] tracking-wide leading-snug">Naufal Fadhiil</p>
                 </div>
 
                 {/* Corner brackets */}
@@ -238,17 +238,17 @@ const AboutSection = memo(function AboutSection() {
             >
               {/* Eyebrow */}
               <p className="font-mono text-[9px] uppercase tracking-[0.28em] text-black/30 mb-5">
-                Based in Indonesia — Open to Work
+                Based in Bandung, Indonesia — Open to Intern/Work
               </p>
 
               {/* Main title */}
               <h2 className="font-display font-bold tracking-[-0.025em] leading-[1.08] text-black">
                 <span className="block text-[44px] sm:text-[56px] lg:text-[64px] xl:text-[72px]">
-                  AI Engineer
+                  Quality Assurance Engineer
                 </span>
 
                 <span className="block text-[22px] sm:text-[26px] lg:text-[30px] xl:text-[34px] font-medium tracking-[-0.01em] text-black/55 mt-2">
-                  with Full-Stack Product Delivery
+                  and Mobile Application Development
                 </span>
               </h2>
             </Gsap.div>
@@ -263,7 +263,7 @@ const AboutSection = memo(function AboutSection() {
             >
 
               <span className="font-mono text-[10px] md:text-[10.5px] uppercase tracking-[0.2em] text-black/35">
-                Computer Vision · LLM Systems · Full-Stack Delivery
+                Software Quality Assurance · Flutter Development · DevOps(Not yet)
               </span>
             </Gsap.div>
 
@@ -276,10 +276,10 @@ const AboutSection = memo(function AboutSection() {
               className="space-y-4 text-[15px] md:text-[15.5px] font-light text-black/60 leading-[1.88] max-w-[580px]"
             >
               <p>
-                I'm <strong className="text-black font-semibold">Firdaus Zickrian</strong>, an AI Engineer focused on building intelligent systems that are not only innovative, but production-ready and measurable in real-world environments.
+                I'm <strong className="text-black font-semibold">Naufal Fadhiil</strong>, an Informatics Engineering student with a strong interest in Software Quality Assurance and Mobile Application Development.
               </p>
               <p>
-                I specialize in Computer Vision and LLM-powered products, with full-stack delivery as a supporting strength to move ideas from prototype to reliable digital products.
+                My primary focus is ensuring user experience through software quality by implementing test planning, test case design, bug reporting, risk analysis, and manual testing practices. I am also experienced in developing mobile applications using Flutter and Dart.
               </p>
             </Gsap.div>
 
@@ -308,7 +308,7 @@ const AboutSection = memo(function AboutSection() {
               </div>
             </Gsap.div>
 
-            {/* Achievements */}
+            Achievements
             {achievements.length > 0 && (
               <Gsap.div
                 initial={{ opacity: 0, y: 14 }}
