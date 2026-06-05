@@ -3,13 +3,36 @@ import { Gsap, useGsapInView } from '../utils/gsapAnimate';
 import { Cpu, Network, Eye, MessageSquare, Infinity, BarChart2, MonitorSmartphone } from 'lucide-react';
 
 const CAPABILITIES = [
-  { title: 'Machine Learning', desc: 'Predictive modeling, regression, and algorithmic classification built for scale.', icon: BarChart2 },
-  { title: 'Deep Learning', desc: 'Neural architectures for complex pattern recognition and high-accuracy deployments.', icon: Network },
-  { title: 'Computer Vision', desc: 'Image processing, real-time object detection, and robust spatial analytics.', icon: Eye },
-  { title: 'NLP & GenAI', desc: 'Large language models, semantic analysis, and human-like conversational AI.', icon: MessageSquare },
-  { title: 'MLOps', desc: 'End-to-end model deployment frameworks, continuous monitoring, and automation.', icon: Infinity },
-  { title: 'Data Analysis', desc: 'Advanced statistical modeling, big data wrangling, and actionable visualizations.', icon: Cpu },
-  { title: 'Web Engineering', desc: 'Scalable full-stack systems with ultra-responsive, accessible interfaces.', icon: MonitorSmartphone },
+  {
+    title: 'Mobile Development',
+    desc: 'Building cross-platform mobile applications using Flutter, Dart, and Firebase.',
+    icon: MonitorSmartphone,
+  },
+  {
+    title: 'QA Engineer',
+    desc: 'Applying quality assurance principles across the software lifecycle.',
+    icon: Cpu,
+  },
+  {
+    title: 'Manual Test',
+    desc: 'Designing test scenarios, executing test cases, exploratory testing, and reporting bugs.',
+    icon: Eye,
+  },
+  {
+    title: 'Automation Test',
+    desc: 'Developing automated test scripts using Selenium, Cypress, and Pytest to improve testing efficiency and reliability.',
+    icon: Network,
+  },
+  {
+    title: 'API Testing',
+    desc: 'Validating REST APIs through request verification, response assertions, and endpoint testing using Postman.',
+    icon: MessageSquare,
+  },
+  {
+    title: 'DevOps (Not Yet)',
+    desc: 'Currently preparing to learn CI/CD pipelines, containerization, deployment workflows, and infrastructure practices.',
+    icon: Infinity,
+  },
 ];
 
 const TechnicalCapabilities = memo(function TechnicalCapabilities() {
@@ -49,7 +72,7 @@ const TechnicalCapabilities = memo(function TechnicalCapabilities() {
         >
           <div className="w-8 h-[2px] bg-black" />
           <span className="font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] md:tracking-[0.26em] text-black">
-            06. Capabilities_Matrix
+            06. Matrix_Numbers
           </span>
           <div className="w-8 h-[2px] bg-black" />
         </Gsap.div>
@@ -128,7 +151,7 @@ const TechnicalCapabilities = memo(function TechnicalCapabilities() {
                   <div className={`w-1.5 h-1.5 md:w-2 md:h-2 bg-black group-hover/ghost:bg-lime-400 rounded-full transition-colors duration-500 ${isGhostActive ? '!bg-lime-400' : ''}`} />
                 </div>
                 <span className={`font-mono text-xs tracking-[0.14em] md:tracking-[0.2em] uppercase text-black font-bold group-hover/ghost:text-lime-400 transition-colors duration-500 ${isGhostActive ? '!text-lime-400' : ''}`}>
-                  Continuously<br />Evolving
+                  Continuously<br /> Learning & Evolving
                 </span>
               </div>
             );
