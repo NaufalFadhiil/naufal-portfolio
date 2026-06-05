@@ -1,90 +1,41 @@
 import { useRef } from "react";
 import { Gsap } from "../utils/gsapAnimate";
-
-// Simple Icons (brand icons) from react-icons
-import {
-    SiPython,
-    SiTensorflow,
-    SiPytorch,
-    SiKeras,
-    SiScikitlearn,
-    SiOpencv,
-    SiStreamlit,
-    SiNumpy,
-    SiPandas,
-    SiReact,
-    SiNextdotjs,
-    SiTailwindcss,
-    SiGreensock,
-    SiJavascript,
-    SiHtml5,
-    SiFastapi,
-    SiExpress,
-    SiPostgresql,
-    SiMysql,
-    SiSupabase,
-    SiDocker,
-
-    SiGit,
-    SiLinux,
-} from "react-icons/si";
-
-// Lucide icons for generic concepts
-import { Bot, BrainCircuit, Workflow, Globe, Cloud } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 const stackCategories = [
-    {
-        title: "AI & Machine Learning",
-        description: "Intelligent systems & models",
-        skills: [
-            { name: "Python", icon: SiPython },
-            { name: "TensorFlow", icon: SiTensorflow },
-            { name: "PyTorch", icon: SiPytorch },
-            { name: "Keras", icon: SiKeras },
-            { name: "Scikit-Learn", icon: SiScikitlearn },
-            { name: "OpenCV", icon: SiOpencv },
-            { name: "Streamlit", icon: SiStreamlit },
-            { name: "Numpy", icon: SiNumpy },
-            { name: "Pandas", icon: SiPandas },
-            { name: "RAG", icon: BrainCircuit },
-            { name: "LLM", icon: Bot },
-        ]
-    },
-    {
-        title: "Frontend Eng.",
-        description: "Interactive web interfaces",
-        skills: [
-            { name: "React", icon: SiReact },
-            { name: "Next.js", icon: SiNextdotjs },
-            { name: "Tailwind CSS", icon: SiTailwindcss },
-            { name: "GSAP", icon: SiGreensock },
-            { name: "JavaScript", icon: SiJavascript },
-            { name: "HTML/CSS", icon: SiHtml5 },
-        ]
-    },
-    {
-        title: "Backend & API",
-        description: "Scalable server architectures",
-        skills: [
-            { name: "FastAPI", icon: SiFastapi },
-            { name: "ExpressJS", icon: SiExpress },
-            { name: "PostgreSQL", icon: SiPostgresql },
-            { name: "MySQL", icon: SiMysql },
-            { name: "Supabase", icon: SiSupabase },
-            { name: "REST APIs", icon: Globe },
-        ]
-    },
-    {
-        title: "DevOps & Cloud",
-        description: "Infrastructure & deployment",
-        skills: [
-            { name: "Docker", icon: SiDocker },
-            { name: "Microsoft Azure", icon: Cloud },
-            { name: "MLOps", icon: Workflow },
-            { name: "Git", icon: SiGit },
-            { name: "Linux", icon: SiLinux },
-        ]
-    }
+  {
+    title: "Quality Assurance",
+    description: "Manual Testing, Automation, and Quality",
+    skills: [
+      { name: "PyCharm", icon: "logos:pycharm" },
+      { name: "Python", icon: "logos:python" },
+      { name: "JavaScript", icon: "logos:javascript" },
+      { name: "Selenium", icon: "logos:selenium" },
+      { name: "Cypress", icon: "logos:cypress-icon" },
+      { name: "Pytest", icon: "logos:pytest" },
+      { name: "Postman", icon: "logos:postman-icon" },
+      { name: "Qase.io", icon: "simple-icons:qase" },
+    ],
+  },
+
+  {
+    title: "Mobile Development",
+    description: "Cross-platform mobile application development",
+    skills: [
+      { name: "VS Code", icon: "logos:visual-studio-code" },
+      { name: "Android Studio", icon: "logos:android-icon" },
+      { name: "Flutter", icon: "logos:flutter" },
+      { name: "Dart", icon: "logos:dart" },
+      { name: "Firebase", icon: "logos:firebase" },
+    ],
+  },
+
+  {
+    title: "DevOps",
+    description: "Started Someday",
+    comingSoon: true,
+    skills: []
+  }
 ];
 
 const TechStack = () => {
@@ -104,7 +55,7 @@ const TechStack = () => {
                 >
                     <div className="w-2 h-2 bg-lime-400 rounded-full" />
                     <span className="font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] md:tracking-[0.26em] text-white/40">
-                        04. Technical_Arsenal
+                        04. Technical_Expertise
                     </span>
                     <div className="flex-1 h-[1px] bg-white/10" />
                 </Gsap.div>
@@ -121,7 +72,7 @@ const TechStack = () => {
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                             className="text-3xl sm:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.98] sm:leading-[0.95] text-white"
                         >
-                            Core <br />
+                            Technical <br />
                             <span className="text-lime-400">Stack.</span>
                         </Gsap.h2>
 
@@ -133,7 +84,7 @@ const TechStack = () => {
                             className="mt-6 md:mt-8 font-sans text-sm md:text-base text-white/55 leading-7 md:leading-8 max-w-sm"
                         >
                             <p>
-                                An ecosystem of tools and architectures mastered for building scalable, intelligent, and high-performance digital solutions. Full engineering proficiency.
+                                A growing collection of tools, frameworks, and technologies used across Quality Assurance, Mobile Development, and future DevOps practices.
                             </p>
                         </Gsap.div>
                     </div>
@@ -159,22 +110,28 @@ const TechStack = () => {
                                 </div>
 
                                 <div className="md:w-2/3 flex flex-wrap gap-4 lg:gap-5 items-center">
-                                    {category.skills.map((skill, idx) => {
-                                        const IconComponent = skill.icon;
-                                        return (
+                                    {category.comingSoon ? (
+                                        <span className="font-mono text-sm uppercase tracking-[0.16em] text-lime-400">
+                                            Coming Soon
+                                        </span>
+                                    ) : (
+                                        category.skills.map((skill, idx) => (
                                             <div
                                                 key={idx}
                                                 className="relative group/icon w-11 h-11 md:w-12 md:h-12 flex items-center justify-center border border-white/10 rounded-lg hover:border-lime-400/50 hover:bg-lime-400/10 transition-all duration-300 cursor-default"
                                                 title={skill.name}
                                             >
-                                                <IconComponent className="w-5 h-5 md:w-6 md:h-6 text-white/60 group-hover:text-white/80 group-hover/icon:text-lime-400 transition-colors" />
-                                                {/* Tooltip */}
+                                                <Icon
+                                                    icon={skill.icon}
+                                                    className="w-5 h-5 md:w-6 md:h-6"
+                                                />
+
                                                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-white text-black text-[10px] font-mono font-bold uppercase tracking-wider rounded whitespace-nowrap opacity-0 group-hover/icon:opacity-100 transition-opacity duration-200 pointer-events-none z-10">
                                                     {skill.name}
                                                 </span>
                                             </div>
-                                        );
-                                    })}
+                                        ))
+                                    )}
                                 </div>
                             </Gsap.div>
                         ))}
