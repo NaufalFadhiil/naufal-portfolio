@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
 import { Gsap } from '../utils/gsapAnimate';
 import { Calendar, Code, ExternalLink, Users, Terminal } from 'lucide-react';
 
-const GITHUB_USERNAME = 'zickrian';
+const GITHUB_USERNAME = 'NaufalFadhiil';
 const GITHUB_PROFILE_URL = `https://github.com/${GITHUB_USERNAME}`;
 const HEATMAP_DAYS = 364;
 const COLS = 52;
@@ -168,7 +168,7 @@ const GitHubStats = memo(function GitHubStats() {
                 >
                     <div className="w-2 h-2 bg-lime-400 rounded-full animate-pulse" />
                     <span className="font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] md:tracking-[0.26em] text-white/40">
-                        05. Source_Metrics
+                        05. Github_Stats
                     </span>
                     <div className="flex-1 h-[1px] bg-white/10" />
                 </Gsap.div>
@@ -297,7 +297,7 @@ const GitHubStats = memo(function GitHubStats() {
                         <div className="mt-8 pt-6 border-t border-white/10 flex justify-between items-center font-mono text-xs md:text-sm text-white/40">
                             <div>
                                 <span className="text-lime-500 mr-2">$</span>
-                                user_query --status
+                                NaufalFadhiil
                             </div>
                             <div className="uppercase tracking-[0.12em] md:tracking-[0.16em] text-lime-400/80 animate-pulse">
                                 ONLINE
