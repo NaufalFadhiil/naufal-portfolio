@@ -5,11 +5,11 @@ import Magnetic from './Magnetic';
 import { exponentialEaseOut } from '../utils/easing';
 
 const NAV_ITEMS = [
-  { label: 'About', sectionId: 'about-section' },
-  { label: 'Logs', sectionId: 'project-section' },
-  { label: 'Work', sectionId: 'experience-section' },
-  { label: 'Stack', sectionId: 'tech-stack-section' },
-  { label: 'Stats', sectionId: 'github-stats-section' },
+  { label: 'Me', sectionId: 'about-section' },
+  { label: 'Proj', sectionId: 'project-section' },
+  { label: 'Exp', sectionId: 'experience-section' },
+  { label: 'T.Stack', sectionId: 'tech-stack-section' },
+  { label: 'G.Stats', sectionId: 'github-stats-section' },
   { label: 'Skills', sectionId: 'capabilities-section' },
 ];
 
