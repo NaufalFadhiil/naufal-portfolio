@@ -145,7 +145,7 @@ const Footer = memo(function Footer() {
 
               {/* Discord Profile Link */}
               <a
-                href="https://discord.com/users/"
+                href="https://discord.com/users/naufalfadhiil"
                 target="_blank"
                 rel="noreferrer"
                 className="group flex items-center justify-between border border-white/10 bg-[#111111] hover:bg-lime-400 hover:border-lime-400 transition-colors duration-300 p-3 mt-1"
