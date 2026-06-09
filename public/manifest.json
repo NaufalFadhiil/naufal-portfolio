@@ -1,9 +1,9 @@
 {
-  "short_name": "Portfolio",
-  "name": "Portfolio",
+  "short_name": "Portfolio's Naufal",
+  "name": "Portfolio's Naufal",
   "icons": [
     {
-      "src": "favicon.svg",
+      "src": "/og-icon.png",
       "sizes": "any",
       "type": "image/svg+xml"
     },
