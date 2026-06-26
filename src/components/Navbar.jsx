@@ -20,6 +20,7 @@ const Navbar = memo(function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isOnDarkSection, setIsOnDarkSection] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isDesktop, setIsDesktop] = useState(false);
   const previousBodyOverflowRef = useRef('');
   const menuStoppedLenisRef = useRef(false);
 
@@ -82,6 +83,35 @@ const Navbar = memo(function Navbar() {
   useEffect(() => () => {
     document.body.style.overflow = previousBodyOverflowRef.current;
   }, []);
+
+//   useEffect(() => {
+//   const checkDesktop = () => {
+//     setIsDesktop(window.innerWidth >= 1024);
+//   };
+
+//   checkDesktop();
+
+//   window.addEventListener("resize", checkDesktop);
+
+//   return () => {
+//     window.removeEventListener("resize", checkDesktop);
+//   };
+// }, []);
+
+useEffect(() => {
+  const media = window.matchMedia("(min-width: 1024px)");
+
+  const update = () => {
+    setIsDesktop(media.matches);
+  };
+
+  update();
+
+  media.addEventListener("change", update);
+
+  return () => media.removeEventListener("change", update);
+}, []);
+
 
   const scrollTo = (sectionId) => {
     setIsMenuOpen(false);
@@ -209,8 +239,14 @@ const Navbar = memo(function Navbar() {
         )}
       </GsapPresence>
 
+
       {/* ── Desktop Menu (Floating Capsule with Gliding Pill) ── */}
-      <div className={`hidden lg:flex items-center pointer-events-auto absolute left-1/2 -translate-x-1/2 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'top-6 scale-100' : 'top-8 scale-105'}`}>
+      {isDesktop && (
+        <div
+          className={`flex items-center pointer-events-auto absolute left-1/2 -translate-x-1/2 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
+          ${scrolled ? 'top-6 scale-100' : 'top-8 scale-105'}`}
+        >
+      {/* <div className="flex items-center pointer-events-auto absolute left-1/2 -translate-x-1/2 top-8 z-[9999]"> */}
         <div className={`flex items-center p-1.5 backdrop-blur-xl border shadow-[0_12px_40px_rgba(0,0,0,0.06)] rounded-full relative transition-colors duration-500 ${isOnDarkSection ? 'bg-black/25 border-white/25' : 'bg-white/70 border-black/5'}`}>
           {NAV_ITEMS.map((item, index) => (
             <Magnetic key={item.sectionId}>
@@ -233,6 +269,7 @@ const Navbar = memo(function Navbar() {
           ))}
         </div>
       </div>
+      )}
 
       {/* ── Desktop Right (Premium CTA) ── */}
       <div className="hidden lg:flex pointer-events-auto">
