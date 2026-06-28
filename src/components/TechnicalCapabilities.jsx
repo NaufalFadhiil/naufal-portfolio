@@ -1,6 +1,6 @@
 import { memo, useRef, useState, useEffect } from 'react';
 import { Gsap, useGsapInView } from '../utils/gsapAnimate';
-import { Cpu, Network, Eye, MessageSquare, Infinity, BarChart2, MonitorSmartphone } from 'lucide-react';
+import { Cpu, Network, Eye, MessageSquare, Infinity, MonitorSmartphone } from 'lucide-react';
 
 const CAPABILITIES = [
   {
@@ -39,6 +39,7 @@ const TechnicalCapabilities = memo(function TechnicalCapabilities() {
   const gridRef = useRef(null);
   const isInView = useGsapInView(gridRef, { once: true, amount: 0.15 });
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   useEffect(() => {
     if (isInView) {
@@ -102,17 +103,21 @@ const TechnicalCapabilities = memo(function TechnicalCapabilities() {
         >
           {CAPABILITIES.map((cap, i) => {
             const isActive = activeIndex === i;
+            const isSelected = selectedIndex === i;
             return (
               <div
                 key={i}
-                className={`group/cell relative border-r-2 border-b-2 border-black p-5 md:p-8 lg:p-10 min-h-[180px] md:min-h-[300px] lg:min-h-[340px] flex flex-col justify-between overflow-hidden cursor-crosshair transition-colors duration-500 hover:bg-[#0A0A0A] ${isActive ? '!bg-[#0A0A0A]' : ''}`}
+                onClick={() =>
+                    setSelectedIndex(selectedIndex === i ? -1 : i)
+                }                
+                className={`group/cell relative border-r-2 border-b-2 border-black p-5 md:p-8 lg:p-10 min-h-[180px] md:min-h-[300px] lg:min-h-[340px] flex flex-col justify-between overflow-hidden cursor-crosshair transition-colors duration-500 hover:bg-[#0A0A0A] ${isActive || isSelected ? '!bg-[#0A0A0A]' : ''}`}
               >
                 {/* Number & Icon Row */}
                 <div className="flex justify-between items-start relative z-10">
-                  <span className={`font-mono text-xs md:text-sm font-bold text-black group-hover/cell:text-lime-400 transition-colors duration-500 tracking-[0.12em] md:tracking-[0.16em] ${isActive ? '!text-lime-400' : ''}`}>
+                  <span className={`font-mono text-xs md:text-sm font-bold text-black group-hover/cell:text-lime-400 transition-colors duration-500 tracking-[0.12em] md:tracking-[0.16em] ${isActive || isSelected ? '!text-lime-400' : ''}`}>
                     0{i + 1}
                   </span>
-                  <cap.icon className={`w-5 h-5 md:w-8 md:h-8 text-black group-hover/cell:text-lime-400 transition-colors duration-500 ${isActive ? '!text-lime-400' : ''}`} strokeWidth={2} />
+                  <cap.icon className={`w-5 h-5 md:w-8 md:h-8 text-black group-hover/cell:text-lime-400 transition-colors duration-500 ${isActive || isSelected ? '!text-lime-400' : ''}`} strokeWidth={2} />
                 </div>
 
                 {/* Center massive number watermark — hidden on mobile */}
@@ -130,7 +135,7 @@ const TechnicalCapabilities = memo(function TechnicalCapabilities() {
                   transition-all
                   duration-500
                   group-hover/cell:scale-105
-                  ${isActive ? "!scale-105" : ""}
+                  ${isActive || isSelected ? "!scale-105" : ""}
                 `}
                     viewBox="0 0 300 300"
                   >
@@ -141,7 +146,7 @@ const TechnicalCapabilities = memo(function TechnicalCapabilities() {
                       fontSize="180"
                       fontWeight="900"
                       fill="transparent"
-                      stroke={isActive ? "#A3E635" : "#000"}
+                      stroke={isActive || isSelected ? "#A3E635" : "#000"}
                       strokeWidth="2"
                       className="transition-all duration-500 group-hover/cell:stroke-lime-400"
                     >
@@ -151,23 +156,51 @@ const TechnicalCapabilities = memo(function TechnicalCapabilities() {
                 </div>
                   {/* Title & Desc Row */}
                   <div className="relative z-10 mt-auto">
-                    <h3 className={`text-base md:text-2xl lg:text-3xl font-black uppercase text-black tracking-tight leading-[1.1] mb-1 md:mb-2 group-hover/cell:text-lime-400 transition-colors duration-500 ${isActive ? '!text-lime-400' : ''}`}>
+                    <h3 className={`text-base md:text-2xl lg:text-3xl font-black uppercase text-black tracking-tight leading-[1.1] mb-1 md:mb-2 group-hover/cell:text-lime-400 transition-colors duration-500 ${isActive || isSelected ? '!text-lime-400' : ''}`}>
                       {cap.title}
                     </h3>
 
                     {/* Desktop Hover Description */}
-                    <div className={`hidden md:block h-0 opacity-0 group-hover/cell:h-[80px] group-hover/cell:opacity-100 group-hover/cell:mt-4 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isActive ? '!h-[80px] !opacity-100 !mt-4' : ''}`}>
-                      <p className={`text-sm border-l-2 border-lime-400 pl-4 text-white/80 font-mono leading-7 transform translate-y-4 group-hover/cell:translate-y-0 transition-transform duration-500 delay-100 ${isActive ? '!translate-y-0' : ''}`}>
-                        {cap.desc}
-                      </p>
+                    <div
+                      className={`
+                      block
+                      overflow-hidden
+                      transition-all
+                      duration-500
+                      ease-[cubic-bezier(0.16,1,0.3,1)]
+                      ${
+                      isSelected
+                      ? "max-h-[220px] opacity-100 mt-4"
+                      : "max-h-0 opacity-0"
+                      }
+                      `}
+                      >
+                      <p
+                        className={`
+                        text-[12px] leading-[1.35]
+                        md:text-sm
+                        border-l-2
+                        border-lime-400
+                        pl-3
+                        md:pl-4
+                        text-white/80
+                        font-mono
+                        leading-5
+                        md:leading-7
+                        transition-all
+                        duration-500
+                        ${
+                        isSelected
+                        ? "translate-y-0 opacity-100"
+                        : "translate-y-3 opacity-0"
+                        }
+                        `}
+                        >
+                            {cap.desc}
+                        </p>
                     </div>
-
-                    {/* Mobile Always Visible Description — smaller text */}
-                    <p className={`md:hidden mt-1 text-[11px] border-l-2 border-black group-hover/cell:border-lime-400 pl-3 text-black/70 group-hover/cell:text-white/80 font-mono leading-5 transition-colors duration-500 ${isActive ? '!border-lime-400 !text-white/80' : ''}`}>
-                      {cap.desc}
-                    </p>
                   </div>
-                </div>
+                </div>  
               );
             })}
 
@@ -175,7 +208,7 @@ const TechnicalCapabilities = memo(function TechnicalCapabilities() {
           {(() => {
             const isGhostActive = activeIndex === CAPABILITIES.length;
             return (
-              <div className={`flex border-r-2 border-b-2 border-black p-5 md:p-8 lg:p-10 min-h-[180px] md:min-h-[300px] lg:min-h-[340px] bg-transparent flex-col justify-center items-center text-center group/ghost hover:bg-[#0A0A0A] transition-colors duration-500 cursor-crosshair ${isGhostActive ? '!bg-[#0A0A0A]' : ''}`}>
+              <div className={`flex border-r-2 border-b-2 border-black p-5 md:p-8 lg:p-10 min-h-[180px] md:min-h-[300px] lg:min-h-[340px] bg-transparent flex-col justify-center items-center text-center group/ghost hover:bg-[#0A0A0A] transition-colors duration-500 cursor-pointer ${isGhostActive ? '!bg-[#0A0A0A]' : ''}`}>
                 <div className={`w-10 h-10 md:w-16 md:h-16 rounded-full border-2 border-black group-hover/ghost:border-lime-400 flex items-center justify-center mb-4 md:mb-6 animate-[spin_10s_linear_infinite] group-hover/ghost:animate-[spin_3s_linear_infinite] transition-all duration-500 ${isGhostActive ? '!border-lime-400 !animate-[spin_3s_linear_infinite]' : ''}`}>
                   <div className={`w-1.5 h-1.5 md:w-2 md:h-2 bg-black group-hover/ghost:bg-lime-400 rounded-full transition-colors duration-500 ${isGhostActive ? '!bg-lime-400' : ''}`} />
                 </div>
