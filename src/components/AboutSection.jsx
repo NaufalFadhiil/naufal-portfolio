@@ -32,13 +32,14 @@ const achievements = [
 ];
 
 const STATS = [
-  { value: 'Quality', label: 'User\nExperience' },
-  { value: 'Mobile+QA', label: 'Development\nTesting' },
-  { value: 'OPEN', label: 'To\nCollab/\nProject/\nWork' },
+  { value: 'QA', label: 'User\nExperience' },
+  { value: 'Mobile', label: 'Development\nWith\nFlutter' },
+  { value: 'OPEN', label: 'To\nCollab\nProject\nWork' },
 ];
 
 const CAPABILITIES = [
   'Mobile Development',
+  'Flutter',
   'Quality Assurance',
   'Manual Testing',
   'Automation Testing',
