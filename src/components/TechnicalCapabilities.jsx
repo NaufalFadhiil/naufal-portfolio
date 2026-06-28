@@ -116,31 +116,56 @@ const TechnicalCapabilities = memo(function TechnicalCapabilities() {
                 </div>
 
                 {/* Center massive number watermark — hidden on mobile */}
-                <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block text-[10rem] md:text-[14rem] font-black tracking-tighter text-transparent [-webkit-text-stroke:2px_black] group-hover/cell:opacity-0 pointer-events-none transition-all duration-500 z-0 ${isActive ? '!opacity-0' : ''}`}>
-                  {i + 1}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+                  <svg
+                    className={`
+                  w-[220px]
+                  h-[220px]
+                  lg:w-[300px]
+                  lg:h-[300px]
+                  transition-all
+                  duration-500
+                  group-hover/cell:scale-105
+                  ${isActive ? "!scale-105" : ""}
+                `}
+                    viewBox="0 0 300 300"
+                  >
+                    <text
+                      x="50%"
+                      y="58%"
+                      textAnchor="middle"
+                      fontSize="180"
+                      fontWeight="900"
+                      fill="transparent"
+                      stroke={isActive ? "#A3E635" : "#000"}
+                      strokeWidth="2"
+                      className="transition-all duration-500 group-hover/cell:stroke-lime-400"
+                    >
+                      {i + 1}
+                    </text>
+                  </svg>
                 </div>
+                  {/* Title & Desc Row */}
+                  <div className="relative z-10 mt-auto">
+                    <h3 className={`text-base md:text-2xl lg:text-3xl font-black uppercase text-black tracking-tight leading-[1.1] mb-1 md:mb-2 group-hover/cell:text-lime-400 transition-colors duration-500 ${isActive ? '!text-lime-400' : ''}`}>
+                      {cap.title}
+                    </h3>
 
-                {/* Title & Desc Row */}
-                <div className="relative z-10 mt-auto">
-                  <h3 className={`text-base md:text-2xl lg:text-3xl font-black uppercase text-black tracking-tight leading-[1.1] mb-1 md:mb-2 group-hover/cell:text-lime-400 transition-colors duration-500 ${isActive ? '!text-lime-400' : ''}`}>
-                    {cap.title}
-                  </h3>
+                    {/* Desktop Hover Description */}
+                    <div className={`hidden md:block h-0 opacity-0 group-hover/cell:h-[80px] group-hover/cell:opacity-100 group-hover/cell:mt-4 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isActive ? '!h-[80px] !opacity-100 !mt-4' : ''}`}>
+                      <p className={`text-sm border-l-2 border-lime-400 pl-4 text-white/80 font-mono leading-7 transform translate-y-4 group-hover/cell:translate-y-0 transition-transform duration-500 delay-100 ${isActive ? '!translate-y-0' : ''}`}>
+                        {cap.desc}
+                      </p>
+                    </div>
 
-                  {/* Desktop Hover Description */}
-                  <div className={`hidden md:block h-0 opacity-0 group-hover/cell:h-[80px] group-hover/cell:opacity-100 group-hover/cell:mt-4 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isActive ? '!h-[80px] !opacity-100 !mt-4' : ''}`}>
-                    <p className={`text-sm border-l-2 border-lime-400 pl-4 text-white/80 font-mono leading-7 transform translate-y-4 group-hover/cell:translate-y-0 transition-transform duration-500 delay-100 ${isActive ? '!translate-y-0' : ''}`}>
+                    {/* Mobile Always Visible Description — smaller text */}
+                    <p className={`md:hidden mt-1 text-[11px] border-l-2 border-black group-hover/cell:border-lime-400 pl-3 text-black/70 group-hover/cell:text-white/80 font-mono leading-5 transition-colors duration-500 ${isActive ? '!border-lime-400 !text-white/80' : ''}`}>
                       {cap.desc}
                     </p>
                   </div>
-
-                  {/* Mobile Always Visible Description — smaller text */}
-                  <p className={`md:hidden mt-1 text-[11px] border-l-2 border-black group-hover/cell:border-lime-400 pl-3 text-black/70 group-hover/cell:text-white/80 font-mono leading-5 transition-colors duration-500 ${isActive ? '!border-lime-400 !text-white/80' : ''}`}>
-                    {cap.desc}
-                  </p>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
 
           {/* Ghost Cell for layout balance on 4-col XL screens */}
           {(() => {
