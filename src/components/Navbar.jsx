@@ -8,8 +8,8 @@ const NAV_ITEMS = [
   { label: 'Me', sectionId: 'about-section' },
   { label: 'Proj', sectionId: 'project-section' },
   { label: 'Exp', sectionId: 'experience-section' },
-  { label: 'T.Stack', sectionId: 'tech-stack-section' },
-  { label: 'G.Stats', sectionId: 'github-stats-section' },
+  { label: 'Stack', sectionId: 'tech-stack-section' },
+  { label: 'Stats', sectionId: 'github-stats-section' },
   { label: 'Skills', sectionId: 'capabilities-section' },
 ];
 
