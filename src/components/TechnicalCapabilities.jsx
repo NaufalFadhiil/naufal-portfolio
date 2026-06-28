@@ -119,8 +119,12 @@ const TechnicalCapabilities = memo(function TechnicalCapabilities() {
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
                   <svg
                     className={`
-                  w-[220px]
-                  h-[220px]
+                  w-[90px]
+                  h-[90px]
+                  sm:w-[130px]
+                  sm:h-[130px]
+                  md:w-[220px]
+                  md:h-[220px]
                   lg:w-[300px]
                   lg:h-[300px]
                   transition-all
