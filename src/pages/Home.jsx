@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, lazy, Suspense, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Preloader from '../components/Preloader';
+// import Preloader from '../components/Preloader';
 import Cursor from '../components/Cursor';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
@@ -25,8 +25,12 @@ export default function Home() {
   const galleryRef = useRef(null);
 
   /* Refactored Loading & Scroll Logic */
-  const [isLoading, setIsLoading] = useState(true);
-  const [isScrollLocked, setIsScrollLocked] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [isScrollLocked, setIsScrollLocked] = useState(true);
+
+  /* Deactivated Loading & Scroll Logic */
+  const [isLoading] = useState(false);
+  const [isScrollLocked] = useState(false);
   const [enableNoiseOverlay, setEnableNoiseOverlay] = useState(false);
 
   // Initialize Lenis with scroll lock state
@@ -68,14 +72,14 @@ export default function Home() {
 
   return (
     <div className="bg-[#FAF9F6] text-black selection:bg-lime-400 selection:text-black relative">
-      {isLoading && (
+      {/* {isLoading && (
         <Preloader
           onComplete={() => {
             setIsLoading(false);
             setIsScrollLocked(false);
           }}
         />
-      )}
+      )} */}
 
       {enableNoiseOverlay && <Suspense fallback={null}><NoiseOverlay /></Suspense>}
       <ChatLauncher />
